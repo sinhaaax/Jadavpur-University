@@ -1,0 +1,33 @@
+1. Consider the program in folder assign1
+a> Compile it so that it compiles with debugging
+symbols [using proper option]
+-> gcc -g a.c -o a
+b> Put breakpoint to function f1.
+-> b f1
+c> Put breakpoint to line 10 of b.c
+-> b b.c:10
+d> Run the program until it finishes. Which
+commands are you using to take it to completion?
+-> r (for run the program)
+   c (using multiple times for completation of the program)
+e> How many times breakpoint “1” is hit in one run of
+the program ?
+-> 6 (value=3)
+f> How many times breakpoint “2” is hit in one run of
+the program
+-> 3 (value=3)
+g> How you can see details about a breakpoint ?
+-> info b 1
+h> How you can see details about all breakpoints ?
+-> info b
+i> What is value of variable x in f1 when breakpoint
+“1” is hit for 3 rd time ? How you can examine it ?
+-> 33
+   run(r) and continue(c) until breakpoint "1" hits for 3rd time then for the value of x enter "p x"
+j> Rerun the program.put a breakpoint at function
+f0. list 5 lines where it has stopped with
+breakpoint 3 for firsttime.
+-> b f0
+   set listsize 5
+   r
+   l
